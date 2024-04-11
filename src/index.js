@@ -22,7 +22,7 @@ const displayRamens = async () => {
     const ramens = await response.json();
         console.log('fetched ramens:', ramens);
 
-    ramenMenu.innerHTML = ''; // clear the used used content
+    ramenMenu.innerHTML = ''; // clearing the used used content
 
     ramens.forEach(ramen => {
       const img = document.createElement('img');
@@ -71,13 +71,13 @@ const addSubmitListener = () => {
     ramenMenu.appendChild(img);
         console.log('New ramen added to the menu!');
 
-    // Clear form fields
+    // clearing the form 
     newRamenForm.reset();
         console.log('New ramen form cleared!');
   });
 };
 
-// Main function to start the program logic
+//the main function to start the program
 const main = () => {
       console.log('Starting program!');
   displayRamens().catch(error => console.error('Error in displayRamens:', error));
